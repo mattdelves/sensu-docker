@@ -3,6 +3,7 @@ MAINTAINER Pete Cheslock <petecheslock@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise universe" >> /etc/apt/sources.list
 RUN apt-get install -y sudo openssh-server curl lsb-release git
+RUN apt-get install -i vim udhcpc
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -s /bin/true /sbin/initctl
 RUN mkdir -p /var/run/sshd
